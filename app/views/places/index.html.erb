@@ -4,5 +4,9 @@
     <i><%=place.address %></i><br />
     <p><%= place.description %></p><br />
   </div>
-
 <% end %>
+
+<div class="paginate">
+<!--render page links in the view:-->
+<%= will_paginate @places, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+</div>
